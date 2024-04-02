@@ -1,0 +1,2 @@
+# SSR
+Servor Side Render
