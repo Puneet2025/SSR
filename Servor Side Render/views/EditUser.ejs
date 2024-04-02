@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/university/:id/edit'/<%= data.id %>/edit?_method=patch" method="POST">
+        <label for="universityName">Enter universityName: </label>
+        <input type="text" id="universityName" name="universityName" value="<%= data.universityName %>">
+
+        <label for="affiliateBy">Enter affiliateBy: </label>
+        <input type="number" id="affiliateBy" name="affiliateBy" value="<%= data.affiliateBy %>">
+
+        <label for="location">Enter location: </label>
+        <input type="text" id="location" name="location" value="<%= data.location %>">
+        
+        <label for="numberOfCourses">Enter numberOfCourses: </label>
+        <input type="text" id="numberOfCourses" name="numberOfCourses" value="<%= data.numberOfCourses %>">
+
+
+        <label for="ImagesUrl">Enter ImagesUrl: </label>
+        <input type="text" id="ImagesUrl" name="ImagesUrl" value="<%= data.ImagesUrl %>">
+
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

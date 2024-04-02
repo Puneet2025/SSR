@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            height: 250px;
+            width: 250px;
+            color: black;
+            border: 3px solid blue;
+            margin: 15px;
+            padding: 8px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1><a href="/university/create">create user</a></h1>
+
+    <div class="container">
+        <% for (let item of data) { %>
+            <div class="box">
+                <p> <%= item.universityName %></p>
+                <p> <%= item.affiliateBy %></p>
+                <p> <%= item.location %></p>
+                <p> <%= item.numberOfCourses %></p>
+                <p> <%= item.ImagesUrl %></p>
+                <a href="/university/<%= item._id %>">Show</a>
+                <a href="/university/<%= item._id %>/edit">edit</a>
+                <a href="/university/<%= item._id %>/delete">Delete</a>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
